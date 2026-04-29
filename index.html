@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificación de Edad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTENIDO PRINCIPAL (bloqueado al inicio) -->
+    <div class="contenido">
+        <h1>Bienvenido 🍻</h1>
+        <p>Contenido exclusivo para mayores de edad</p>
+    </div>
+
+    <!-- OVERLAY DE VERIFICACIÓN -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h2>Verificación de Edad</h2>
+            <p>Ingresa tu edad para continuar</p>
+
+            <input type="number" id="edad" placeholder="Tu edad" min="0">
+            <button id="btnVerificar">Entrar</button>
+
+            <p id="mensaje"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

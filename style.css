@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTENIDO DE FONDO */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    color: white;
+}
+
+/* OVERLAY CON BLUR */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Fondo oscuro + blur */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: fadeIn 1.2s ease;
+}
+
+/* MODAL CON SLIDE + FADE */
+.modal {
+    background: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    /* Animación inicial */
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+
+    animation: slideFadeIn 0.9s ease forwards;
+}
+
+input, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
